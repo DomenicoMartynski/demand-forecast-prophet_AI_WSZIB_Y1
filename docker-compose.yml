@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: demand-forecasting-prophet
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+
